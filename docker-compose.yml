@@ -7,7 +7,7 @@ services:
     environment:
       - LANG=fr_FR
     ports:
-      - 8000:8000
+      - 8390:8000
 
   jackett:
     image: lscr.io/linuxserver/jackett:latest
