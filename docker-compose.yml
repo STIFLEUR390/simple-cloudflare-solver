@@ -7,4 +7,14 @@ services:
     environment:
       - LANG=fr_FR
     ports:
-      - 8390:8000
+      - 8000:8000
+
+  jackett:
+    image: lscr.io/linuxserver/jackett:latest
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Paris
+      - LOG_LEVEL=debug
+    ports:
+      - 9117:9117

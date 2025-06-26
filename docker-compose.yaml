@@ -1,0 +1,10 @@
+services:
+  scraper:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ["python", "src/server.py", "--debug"]
+    environment:
+      - LANG=fr_FR
+    ports:
+      - 8390:8000
